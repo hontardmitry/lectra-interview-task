@@ -6,6 +6,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BrowserConfig {
 
+    private BrowserConfig() {
+    }
+
     public static void setupDefaultBrowserConfig() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");

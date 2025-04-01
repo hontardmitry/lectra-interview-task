@@ -44,10 +44,6 @@ public abstract class AbstractComponent {
         return Arrays.asList(cssClass.split(" ")).contains(searchedClass);
     }
 
-    public boolean isElementActive(SelenideElement element) {
-        return elementHasClass(element, IS_ACTIVE_INDICATOR);
-    }
-
     public SelenideElement getTabByNumber(int tabNumber, ElementsCollection tabs) {
         tabs.shouldHave(sizeGreaterThanOrEqual(tabNumber + 1));
         return tabs.get(tabNumber);

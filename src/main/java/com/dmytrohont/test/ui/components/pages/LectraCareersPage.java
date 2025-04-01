@@ -14,18 +14,12 @@ public class LectraCareersPage extends AbstractPage {
 
     private final ElementsCollection searchJobsButtons = $$("input[value='Search jobs']");
     private final SelenideElement firstJobListing = $("td a.jobTitle-link");
-    private final SelenideElement acceptCookiesButtonOnCarriers = $("#cookie-accept");
 
     public LectraCareersPage acceptCareerCookies() {
         waitPageReadyStateComplete();
 
         Actions act = new Actions(WebDriverRunner.getWebDriver());
         act.moveToLocation(1400, 800).click();
-//        var timeout = Duration.ofSeconds(50);
-//        var wait = new WebDriverWait(WebDriverRunner.getWebDriver(), timeout);
-//        wait.until(ExpectedConditions
-//                .elementToBeClickable(acceptCookiesButtonOnCarriers));
-//        acceptCookiesButtonOnCarriers.click();
         return this;
     }
 
